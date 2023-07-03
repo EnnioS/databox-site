@@ -1,0 +1,235 @@
+//FONTS FAMILY
+*{
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/src/assets/fonts/Montserrat-Regular.ttf') format("ttf");
+}
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('/src/assets/fonts/Montserrat-Black.ttf') format("ttf");;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('/src/assets/fonts/Montserrat-Bold.ttf') format("ttf");;
+}
+
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url('/src/assets/fonts/Montserrat-ExtraBold.ttf') format("ttf");;
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('/src/assets/fonts/Montserrat-Light.ttf') format("ttf");;
+}
+
+@font-face {
+    font-family: 'Montserrat-ExtraLight';
+    src: url('/src/assets/fonts/Montserrat-ExtraLight.ttf') format("ttf");;
+}
+
+span, p, h1, h2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+//LINK
+a{
+    text-decoration: none;
+}
+
+//BODY
+body{
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+@media (max-width:992px){
+
+    body{
+        padding-bottom: 150px;
+    }
+}
+
+@media (max-width:550px){
+    body{
+        padding-bottom: 240px;
+    }
+}
+
+//BACKGROUD COLOR
+.white-back{
+    background-color: #fff;
+}
+.dark-gray-back{
+    background-color: #30312f;
+}
+.black-back{
+    background-color: #1d1d1b;
+}
+.sky-back{
+    background-color: #0078c1;
+} 
+.blue-back{
+    background-color: #00499a;
+}
+
+//FONT COLOR
+.white-color{
+    color: #fff;
+}
+.gray-color{
+    color:#dcdcdc
+}
+.dark-gray-color{
+    color: #30312f;
+}
+.black-color{
+    color: #1d1d1b;
+}
+.sky-color{
+    color: #0078c1;
+} 
+.blue-color{
+    color: #00499a;
+}
+
+
+//FONT SIZE
+.f-size-13{
+    font-size: 13px;
+}
+
+.f-size-15{
+    font-size: 15px;
+}
+
+.f-size-25{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.f-size-30{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.f-size-38{
+    font-size: 38px;
+    font-weight: 800;
+}
+
+//FONT-STYLE
+
+.font-italic {
+    font-style: italic !important; 
+}
+
+//BUTTONS
+
+
+.btn-white-blue{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 8px;
+    border-radius: 8px;
+    height: 35px;
+    width: 115px;
+    border: unset;
+}
+
+.btn-white-blue:hover{
+    background-color: #000;
+}
+
+.btn-white-blue:hover span{
+    color: #fff !important;
+}
+
+.btn-white-blue:hover svg{
+    fill: #fff;
+}
+
+.btn-white-blue span{
+    color:#00499a !important;
+}
+
+.btn-white-blue svg{
+    width: 14px;
+    fill: #00499a;
+    margin-left: 5px;
+}
+
+
+
+.btn-black-blue{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    padding: 0 8px;
+    height: 35px;
+    // width: 115px;
+    border: unset;
+}
+
+.btn-black-blue:hover{
+    background-color: #00499a;
+}
+
+.btn-black-blue span{
+    color:#fff !important;
+}
+
+.btn-black-blue svg{
+    width: 14px;
+    fill: #fff;
+    margin-left: 5px;
+}
+
+
+
+
+.btn-white-black{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 8px;
+    height: 35px;
+    // width: 115px;
+    border: unset;
+}
+
+.btn-white-black:hover{
+    background-color: #000;
+}
+
+.btn-white-black:hover span{
+    color: #fff !important;
+}
+
+.btn-white-black:hover svg{
+    fill: #fff;
+}
+
+.btn-white-black span{
+    color:#000 !important;
+}
+
+.btn-white-black svg{
+    width: 14px;
+    fill: #000;
+    margin-left: 5px;
+}

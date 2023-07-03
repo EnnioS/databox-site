@@ -1,0 +1,27 @@
+
+//SECCION INTRODUCCIÓN HOME
+
+.home-intro-section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.home-intro-title{
+    color: #004799;
+}
+
+.home-intro-section div:first-child{
+ align-self: center;
+}
+
+.home-intro-section img{
+    height: 120px;
+    
+}
+
+.home-services-section{
+    margin: 50px 0;
+    padding:30px 0;
+}
+

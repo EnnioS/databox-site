@@ -1,0 +1,33 @@
+//SECCION HOME HERO BANNER
+.hero-banner-home-section {
+    position: relative;
+    margin-bottom: 50px;
+    z-index: -1;
+}
+
+
+.hero-banner-home-section img{
+    width: 100%;
+}
+
+.text-hero-banner-home{
+    position: absolute;
+    top: 35%;
+}
+
+.text-hero-banner-home-container{
+    padding-left: 10%;
+}
+
+.text-box-hero-banner-home{
+    background-color: #00499a;
+    height: 60px;
+    padding: 0 8px 0;
+    width: 295px;
+}
+
+.text-description-hero-banner-home{
+    max-width: 45%;
+}
+
+

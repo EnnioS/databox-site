@@ -1,0 +1,29 @@
+
+
+<div [ngClass]="'carousel-header'">
+  <owl-carousel-o [options]="customOptions">
+
+    <ng-container *ngFor="let slide of slidesStore">
+      <ng-template carouselSlide [id]="slide.id">
+        <section [ngClass]="'hero-banner-home-section'">
+          <div>
+            <img [src]="slide.img" [alt]="slide.alt" [title]="slide.title">
+          </div>
+          <div [ngClass]="['container','text-hero-banner-home']">
+              <div [ngClass]="'text-hero-banner-home-container'">
+                  <div [ngClass]="['text-box-hero-banner-home', 'blue-back']">
+                      <span [ngClass]="['white-color','f-size-38']">Consectetuer</span>
+                  </div>
+                  <div [ngClass]="['text-description-hero-banner-home']">
+                      <span [ngClass]="['white-color','f-size-25']">
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                      </span>
+                  </div>
+              </div>
+          </div>
+        </section>
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+</div>

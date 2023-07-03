@@ -1,0 +1,96 @@
+<section [ngClass]="'hero-pages'">
+    <img [src]="'/assets/img/contact/hero-banner-17.jpg'">
+</section>
+
+<section [ngClass]="['container','body-pages']">
+    <div [ngClass]="'text-main-page-title'">
+        <div>
+            <h1 [ngClass]="'f-size-30'">General Inquiries</h1>
+        </div>
+        <div [ngClass]="'punto-final-azul-titulo'"></div>
+    </div>
+    
+    <div [ngClass]="'contact-text'">
+        <div><span>customer.service@databoxai.com</span></div>
+        <div><span>&nbsp;| +(886) 985-807-279</span></div>
+        <div><span>&nbsp;| +(505) 8696 9703</span></div>
+    </div>
+
+    <div [ngClass]="'contact-form-welcome'">
+        
+        <form [ngClass]="'form-contact'" [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
+            
+            <div [ngClass]="'form-contact-group-div'">
+                <div class="form-group">
+                    <label><span>First</span></label>
+                    <input class="form-control" type="text" name="name" formControlName="first">
+                </div>
+                <div class="form-group">
+                    <label><span>Last</span></label>
+                    <input class="form-control" type="text" name="name" formControlName="last">
+                </div>
+            </div>
+
+            <div [ngClass]="'form-contact-group-div'">
+                <div class="form-group">
+                    <label><span>Company</span></label>
+                    <input class="form-control" type="text" name="name" formControlName="company">
+                </div>
+                <div class="form-group">
+                    <label><span>Country</span></label>
+                    <input class="form-control" type="text" name="name" formControlName="country">
+                </div>
+            </div>
+            
+            <div [ngClass]="'form-contact-group-div'">
+                <div class="form-group">
+                    <label><span>Email</span></label>
+                    <input class="form-control" type="text" name="name" formControlName="email">
+                </div>
+                <div class="form-group">
+                    <label><span>Phone number</span></label>
+                    <input class="form-control" type="text" name="name" formControlName="phone">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label><span>How did you hear about us?</span></label>
+                <input class="form-control" type="text" name="name" formControlName="how">
+            </div>
+
+            <div class="form-group">
+                <label><span>Subject</span></label>
+                <input class="form-control" type="text" name="subject" formControlName="subject">
+            </div>
+
+            <div class="form-group">
+                <label><span>How can we help?</span></label>
+                <textarea class="form-control" rows="10" cols="50" name="message" formControlName="message">
+                </textarea>
+            </div>
+
+            <div [ngClass]="['btn-content']">
+                <button [ngClass]="['btn-black-blue']" type="submit" [disabled]="!FormData.valid"><span>{{tituloAccion}}</span></button>
+            </div>
+            <alert></alert>
+        </form>
+        
+        <div [ngClass]="['sky-back','contact-welcome']">
+            <div [ngClass]="'text-main-page-title'">
+                <div>
+                    <span [ngClass]="['f-size-30','white-color']">Get in touch<br> with us</span>
+                </div>
+                <div [ngClass]="'punto-final-blanco-titulo'"></div>
+            </div>
+            <div>
+                <span class="text-white font-italic">
+                    We are based in Central America and work with clients and partners worldwide. 
+                    Dive deep into the heart of our vibrant culture and immerse yourself in the 
+                    unique experience of our office. Feel the energy and embrace the passion that 
+                    fuels our team. Join us for a visit and discover firsthand how our culture sets 
+                    us apart.
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
