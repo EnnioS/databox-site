@@ -19,6 +19,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AlertModule } from '../alert/alert.module';
+import { MarketingComponent } from './pages/services/marketing/marketing.component';
+import { DataSafetlyComponent } from './pages/services/data-safetly/data-safetly.component';
+import { ImageClassificationComponent } from './pages/services/image-classification/image-classification.component';
+import { IotDevelopmentComponent } from './pages/services/iot-development/iot-development.component';
 
 
 @NgModule({
@@ -31,7 +35,11 @@ import { AlertModule } from '../alert/alert.module';
     AboutComponent,
     ContactComponent,
     CarouselHolderComponent,
-    CarouselServicesComponent 
+    CarouselServicesComponent,
+    MarketingComponent,
+    DataSafetlyComponent,
+    ImageClassificationComponent,
+    IotDevelopmentComponent 
   ],
   imports: [
     CommonModule,

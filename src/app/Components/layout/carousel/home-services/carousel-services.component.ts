@@ -35,10 +35,10 @@ export class CarouselServicesComponent {
   }
 
   slidesStore = [
-    {id: '1', img: "assets/img/home/hero-banner-15.jpg", alt:"techno 1", title:"Service 1", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",  url:"/service1"},
-    {id: '2', img: "assets/img/home/hero-banner-15.jpg", alt:"techno 2", title:"Service 2", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",  url:"/service2"},
-    {id: '3', img: "assets/img/home/hero-banner-15.jpg", alt:"techno 3", title:"Service 3", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",  url:"/service3"},
-    {id: '2', img: "assets/img/home/hero-banner-15.jpg", alt:"techno 2", title:"Service 4", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",  url:"/service4"},
-    {id: '3', img: "assets/img/home/hero-banner-15.jpg", alt:"techno 3", title:"Service 5", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",  url:"/service5"}
+    {id: '1', img: "assets/img/icons/icon-19.svg", alt:"smart marketing", title:"Smart Marketing", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",  url:"/smart-marketing"},
+    {id: '2', img: "assets/img/icons/icon-20.svg", alt:"smart data safetly", title:"Smart Data Safetly", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",  url:"/smart-data-safetly"},
+    {id: '3', img: "assets/img/icons/icon-21.svg", alt:"smart image classification", title:"Smart Image Classification", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",  url:"/smart-image-classification"},
+    {id: '4', img: "assets/img/icons/icon-22.svg", alt:"iot product developer", title:"IoT Product Development", description:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",  url:"/iot-product-development"}
+   
   ];
 }

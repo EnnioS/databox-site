@@ -9,12 +9,14 @@
             </div>
         </div>
         <div [ngClass]="'social-web'">
-            <button [ngClass]="'btn-white-blue'">
-                <span>Contact us</span>
-                <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.33 22.32">
-                    <path d="M9,20,16,13H0V9.47H15.94L8.83,2.38,11.19,0,22.33,11.13,11.15,22.32Z"/>
-                </svg> 
-            </button>
+            <a [href]="'/contact'">
+                <button [ngClass]="'btn-white-blue'">
+                    <span>Contact us</span>
+                    <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.33 22.32">
+                        <path d="M9,20,16,13H0V9.47H15.94L8.83,2.38,11.19,0,22.33,11.13,11.15,22.32Z"/>
+                    </svg> 
+                </button>
+            </a>
             <div [ngClass]="'social-svgs'">
                 <a href="#">
                     <img [src]="'assets/img/icons/icon-08.svg'">

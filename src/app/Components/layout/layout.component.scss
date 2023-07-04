@@ -14,7 +14,7 @@
 
 .text-main-page-title{
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: flex-start;
     margin-top: 35px;
 }
@@ -113,6 +113,13 @@
     border-radius: 25px;
     width: 45px;
     height: 45px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .owl-carousel .owl-nav .owl-prev:hover,
+  .owl-carousel .owl-nav .owl-next:hover {
+    
+      background: rgba(255, 255, 255, 0.8);
   }
 
   
@@ -167,3 +174,53 @@
   // .owl-carousel .next-carousel:hover {
   //   background-position: -24px -53px;
   // }
+
+
+
+  //SECCION HOME HERO BANNER
+.hero-banner-service-section {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+
+.hero-banner-service-section img{
+  width: 100%;
+}
+
+.text-hero-banner-service{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-hero-banner-service-container{
+  padding-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-box-hero-banner-service{
+  background-color: #00499a;
+  height: 60px;
+  padding: 0 8px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.text-box-hero-banner-service img{
+  width: 35px;
+}
+
+.text-description-hero-banner-service{
+  max-width: 45%;
+}
+.image-hero-banner-service img{
+  max-height: 370px;
+}

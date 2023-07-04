@@ -1,11 +1,18 @@
 //SECCION HOME HERO BANNER
 .hero-banner-home-section {
     position: relative;
-    margin-bottom: 50px;
+    justify-content: space-between;
     z-index: -1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 10px 50px;
+    height: 300px;
 }
 
-
+.hero-banner-home-section button{
+    width: 105px;
+}
 .hero-banner-home-section img{
     width: 100%;
 }
@@ -26,6 +33,15 @@
     width: 295px;
 }
 
+.icon-services-container{
+    width: 55px;
+    align-self: center;
+}
+
+.title-services-container{
+    text-align: center;
+}
 .text-description-hero-banner-home{
     max-width: 45%;
 }
+
