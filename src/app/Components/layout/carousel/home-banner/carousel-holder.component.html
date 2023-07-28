@@ -1,25 +1,37 @@
 
 
-<div [ngClass]="'carousel-header'">
+<div [ngClass]="'carousel-header'"  (window:resize)="onResize($event)">
   <owl-carousel-o [options]="customOptions">
 
     <ng-container *ngFor="let slide of slidesStore">
       <ng-template carouselSlide [id]="slide.id">
         <section [ngClass]="'hero-banner-home-section'">
           <div>
-            <img [src]="slide.img" [alt]="slide.alt" [title]="slide.title">
+            <img [src]="slide.img" [alt]="'generic.' + slide.title | translate" [title]="slide.title">
           </div>
-          <div [ngClass]="['container','text-hero-banner-home']">
-              <div [ngClass]="'text-hero-banner-home-container'">
-                  <div [ngClass]="['text-box-hero-banner-home', 'blue-back']">
-                      <span [ngClass]="['white-color','f-size-38']">Consectetuer</span>
-                  </div>
-                  <div [ngClass]="['text-description-hero-banner-home']">
-                      <span [ngClass]="['white-color','f-size-25']">
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                      </span>
-                  </div>
-              </div>
+          <div class="container">
+            <div [ngClass]="['text-hero-banner-home',slide.clase]">
+                <div [ngClass]="['text-hero-banner-home-container','container']">
+                    <div [ngClass]="['text-box-hero-banner-home', 'blue-back']">
+                        <span [ngClass]="['white-color','f-size-38']">
+                          {{"generic." + slide.title | translate}}
+                        </span>
+                    </div>
+                    <div [ngClass]="['text-description-hero-banner-home']">
+                        <span [ngClass]="['white-color','f-size-25']">
+                          {{"generic." + slide.description | translate}}
+                        </span>
+                    </div>
+                    <button [ngClass]="'btn-white-black'">
+                      <a [href]="slide.url">
+                        <span>Explore</span>
+                        <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.33 22.32">
+                            <path d="M9,20,16,13H0V9.47H15.94L8.83,2.38,11.19,0,22.33,11.13,11.15,22.32Z"/>
+                        </svg> 
+                      </a>
+                    </button>
+                </div>
+            </div>
           </div>
         </section>
       </ng-template>

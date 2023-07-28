@@ -1,4 +1,6 @@
 import { Component,  OnInit, ViewEncapsulation  } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+// import { TranslateService } from '@ngx-translate/core/public_api';
 
 @Component({
   selector: 'app-layout',
@@ -7,8 +9,16 @@ import { Component,  OnInit, ViewEncapsulation  } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class LayoutComponent implements OnInit {
-  constructor() {
+  constructor(private translate:TranslateService){
+    this.setAppLang();
   }
+
+  setAppLang():void{
+    this.translate.setDefaultLang('en');
+    this.translate.use(this.translate.getBrowserLang()!);
+  }
+
+  
 
   ngOnInit(): void {
   }

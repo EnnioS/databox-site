@@ -12,22 +12,124 @@
 
 .text-hero-banner-home{
     position: absolute;
-    top: 35%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .text-hero-banner-home-container{
-    padding-left: 10%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .text-box-hero-banner-home{
     background-color: #00499a;
-    height: 60px;
-    padding: 0 8px 0;
-    width: 295px;
+    height: 100%;
+    padding: 8px 8px;
+    // width: 100%;
+    box-shadow:  1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+    
 }
+
+.text-box-hero-banner-home span{
+    line-height: 1.8rem;
+}
+
+// .img-container-sm .text-box-hero-banner-home{
+//     width: 365px;
+// }
+// .img-container-sdf .text-box-hero-banner-home{
+//     width: 400px;
+// }
+// .img-container-sic .text-box-hero-banner-home{
+//     width: 570px;
+// }
+// .img-container-iotpd .text-box-hero-banner-home{
+//     width: 540px;
+// }
 
 .text-description-hero-banner-home{
-    max-width: 45%;
+    max-width: 50%;
+    padding: 15px 0;
+    line-height: 1.5rem;
 }
 
+.text-description-hero-banner-home span{
+    text-shadow:  2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width:1099px) {
+    .text-description-hero-banner-home span{
+        font-size: 20px;
+    }
+
+    .text-description-hero-banner-home{
+        max-width: 65%;
+        padding: 15px 0;
+        line-height: 1.2rem;
+    }
+}
+
+@media (max-width:850px) {
+    .text-description-hero-banner-home span{
+        font-size: 16px;
+    }
+
+    .text-box-hero-banner-home span{
+        font-size: 30px;
+    }
+
+
+    // .img-container-sm .text-box-hero-banner-home{
+    //     width: 290px;
+    // }
+    // .img-container-sdf .text-box-hero-banner-home{
+    //     width: 320px;
+    // }
+    // .img-container-sic .text-box-hero-banner-home{
+    //     width: 450px;
+    // }
+    // .img-container-iotpd .text-box-hero-banner-home{
+    //     width: 430px;
+    // }
+}
+
+@media (max-width:765px) {
+    .text-box-hero-banner-home span{
+        font-size: 25px !important;
+        line-height: 1.8rem;
+    }
+}
+
+@media (max-width:500px) {
+    // .img-container-sm .text-box-hero-banner-home{
+    //     width: 185px;
+    // }
+
+    // .img-container-sdf .text-box-hero-banner-home{
+    //     width: 205px;
+    // }
+
+    // .img-container-sic .text-box-hero-banner-home{
+    //     width: 240px;
+    // }
+
+    // .img-container-iotpd .text-box-hero-banner-home{
+    //     width: 238px;
+    // }
+
+    .text-box-hero-banner-home{
+        padding: 10px;
+    }
+
+    .text-box-hero-banner-home span{
+        line-height: 1.4rem;
+    }
+}
+
+@media (max-width:400px) {
+    .text-description-hero-banner-home{
+        max-width: 100%;
+    }
+}
 

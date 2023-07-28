@@ -5,22 +5,18 @@
         <div> 
             <img [src]="'assets/img/logo/logo-14.png'">
         </div>
-
+        <!-- <div *ngFor="let item of home">
+            {{ 'home.' + item | translate }}
+        </div>     -->
         <div>
             <div [ngClass]="'home-intro-title'"> 
                 
-                    <h1 [ngClass]="'f-size-25'">“We’re a software and services company that builds and transforms
-                        businesses using advatnce technologies, data and AI”</h1>
+                    <h1 [ngClass]="'f-size-25'">{{'home.weare' | translate }}</h1>
                         <br>
                 
             </div>
-            <span>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
-                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud 
-                exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea 
-                commodo consequat. Duis autem vel eum iriure dolor in hendrerit in 
-                vulputate velit 
+            <span [innerHTML] = "'home.welcome' | translate">
+                
             </span>
             
         </div>
@@ -28,7 +24,7 @@
             
             <button [ngClass]="'btn-black-blue'">
                 <a [href]="'/about'">
-                <span>About us</span>
+                <span>{{ 'menu.about' | translate }}</span>
                 <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.33 22.32">
                     <path d="M9,20,16,13H0V9.47H15.94L8.83,2.38,11.19,0,22.33,11.13,11.15,22.32Z"/>
                 </svg> 
@@ -41,7 +37,7 @@
     <section [ngClass]="['sky-back','home-services-section']">
         <div [ngClass]="['sub-title-line']">
             <div>
-                <span [ngClass]="['white-color', 'f-size-25']">Services</span>
+                <span [ngClass]="['white-color', 'f-size-25']">{{ "menu.services" | translate }}</span>
             </div>
             <div ngClass="circle-lines">
                 <div [ngClass]="'white-back'" [id]="'circle'">

@@ -1,1 +1,38 @@
-<p>services works!</p>
+<section [ngClass]="'container'">
+    <div [ngClass]="'text-main-page-title'">
+        <div>
+            <h1 [ngClass]="'f-size-30'">{{"menu.services" | translate}}</h1>
+        </div>
+        <div [ngClass]="'punto-final-azul-titulo-services'"></div>
+    </div>
+</section>
+<section [ngClass]="['service-pages-box','container']">
+    <ng-container *ngFor="let services of slidesStore">
+        <div [ngClass]="['sky-back','service-page-container']">
+        
+           <div [ngClass]="'icon-services-container'">
+              <img [src]="services.img" [alt]="'generic.' + services.title | translate" [title]="services.title">
+            </div>
+             
+            <div [ngClass]="['title-services-container','f-size-25','white-color']">
+              <span [ngClass]="'white-color'">
+                {{"generic." + services.title | translate}}
+              </span>
+            </div>
+            <div>
+              <span [ngClass]="'white-color'">
+                {{"generic." + services.description | translate}}  
+              </span>
+            </div>
+            <button [ngClass]="'btn-white-black'">
+              <a [href]="services.url">
+                <span>{{"generic.explore" | translate}}</span>
+                <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.33 22.32">
+                    <path d="M9,20,16,13H0V9.47H15.94L8.83,2.38,11.19,0,22.33,11.13,11.15,22.32Z"/>
+                </svg> 
+              </a>
+            </button>
+            
+        </div>
+    </ng-container>
+</section>

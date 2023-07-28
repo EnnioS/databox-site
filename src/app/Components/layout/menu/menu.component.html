@@ -5,64 +5,94 @@
         <div [ngClass]="['container','menu-nav-container']" >
             <div [ngClass]="'logo-divisor'">
                 <div>
-                    <img [src]="'assets/img/logo/logo-07.png'">
+                    <a href="/">
+                        <img [src]="'assets/img/logo/logo-07.png'">
+                    </a>
                 </div>
                 <div [ngClass]="'vertical-divisor'">
                 </div>  
                 <div [ngClass]="'menu-nav-buttons'" *ngIf="activeMobileMenu">
                     <ul [ngClass]="'menu-btn-list'">
-                        <li>
+                        <li (click)="closeMenMoble()">
                             <a [routerLink]="['/home']" routerLinkActive="router-link-active">
-                                <span [ngClass]="'white-color'">Home</span>
+                                <span [ngClass]="'white-color'">{{"menu.home" | translate}}</span>
                             </a>
                         </li>
                         <li [ngClass]="'btn-dropdown'" (click)="showSubMenu()" (mouseover)="activeSubMenu=true" (mouseleave)="activeSubMenu=false">
                             
-                            <div [ngClass]="'btn-dropdown-title'">
+                            <a [ngClass]="'btn-dropdown-title'" [routerLink]="['/services']" routerLinkActive="router-link-active">
                                 <div>
-                                    <span [ngClass]="'white-color'">Services</span>
+                                    <span [ngClass]="'white-color'">{{"menu.services" | translate}}</span>
                                 </div>
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                                         <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
                                     </svg>
                                 </div>
-                            </div>
+                            </a>
 
                             <div [ngClass]="'sub-menu-btn-container'">
                                 <ul *ngIf="activeSubMenu" [ngClass]="'sub-menu-btn-list'">
-                                    <li>
+                                    <li (click)="closeMenMoble()">
                                         <a [routerLink]="['/smart-marketing']" routerLinkActive="router-link-active">
-                                            <span>Smart Marketing</span>
+                                            <span>{{"generic.sm" | translate}}</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li (click)="closeMenMoble()">
                                         <a [routerLink]="['/smart-data-safetly']" routerLinkActive="router-link-active">
-                                            <span>Smart Data Safetly</span>
+                                            <span>{{"generic.sds" | translate}}</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li (click)="closeMenMoble()">
                                         <a [routerLink]="['/smart-image-classification']" routerLinkActive="router-link-active">
-                                            <span>Smart Image Classification</span>
+                                            <span>{{"generic.sic" | translate}}</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li (click)="closeMenMoble()">
                                         <a [routerLink]="['/iot-product-development']" routerLinkActive="router-link-active">
-                                            <span>IoT Product Development</span>
+                                            <span>{{"generic.iotpd" | translate}}</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li>
+                        <li (click)="closeMenMoble()">
                             <a [routerLink]="['/about']" routerLinkActive="router-link-active">
-                                <span [ngClass]="'white-color'">About us</span>
+                                <span [ngClass]="'white-color'">{{"menu.about" | translate}}</span>
                             </a>
                         </li>
-                        <li>
+                        <li (click)="closeMenMoble()">
                             <a [routerLink]="['/contact']" routerLinkActive="router-link-active">
-                                <span [ngClass]="'white-color'">Contact us</span>
+                                <span [ngClass]="'white-color'">{{"generic.contact" | translate}}</span>
                             </a>
+                        </li>
+                        <li [ngClass]="'btn-dropdown'" (click)="showSubMenu2()" (mouseover)="activeSubMenu2=true" (mouseleave)="activeSubMenu2=false">
+                         
+                            <a [ngClass]="'btn-dropdown-title'">
+                                <div>
+                                    <span [ngClass]="'white-color'">{{"menu.language" | translate}}</span>
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                                        <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                                    </svg>
+                                </div>
+                            </a>
+
+                            <div [ngClass]="'sub-menu-btn-container'">
+                                <ul *ngIf="activeSubMenu2" [ngClass]="'sub-menu-btn-list2'">
+                                    <li (click)="closeMenMoble()">
+                                        <div (click)="esLanguage()">
+                                            <span>{{"generic.sp" | translate}}</span>
+                                        </div>
+                                    </li>
+                                    <li (click)="closeMenMoble()">
+                                        <div (click)="enLanguage()">
+                                            <span>{{"generic.en" | translate}}</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -73,11 +103,13 @@
 
             <div [ngClass]="'menu-nav-socila-web'">
                 <a href="#">
-                    <img [src]="'assets/img/icons/icon-08.svg'">
+                    <div>
+                        <img [src]="'assets/img/icons/icon-08.svg'">
+                    </div>
                 </a>
-                <a href="#">
+                <!-- <a href="#">
                     <img [src]="'assets/img/icons/icon-09.svg'">
-                </a>
+                </a> -->
                 <!-- <a href="#">
                     <img [src]="'assets/img/icons/icon-10.svg'">
                 </a> -->
@@ -85,10 +117,9 @@
             
         </div>
         <div>
-            <button class="movil-btn" (click)="showMobileMenu()" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path style="fill: #fff; background-color:#fff" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
-                </svg>
+            <button class="movil-btn" (click)="showMobileMenu()">
+                <img [src]="'assets/img/icons/burger.svg'">
+            <!-- <button class="movil-btn" (click)="showMobileMenu()" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu"> -->
                 <!-- <svg viewBox="0 0 100 100">
                 <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
                 <path class="line line2" d="M 20,50 H 80" />

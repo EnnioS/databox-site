@@ -15,14 +15,14 @@ const routes: Routes = [{
     component:LayoutComponent,
     children:[
       {path:'',redirectTo:'home', pathMatch:'full'},
-      {path:'home', title:"Inicio | DATABOX", component:HomeComponent},
-      {path:'services', title:"Services | DATABOX", component:ServicesComponent},
-      {path:'about', title:"About Us | DATABOX", component:AboutComponent},
-      {path:'contact', title:"Contact Us | DATABOX", component:ContactComponent},
-      {path:'smart-marketing', title:"Smart Marketing | DATABOX", component:MarketingComponent},
-      {path:'smart-data-safetly', title:"Smar Data Safetly | DATABOX", component:DataSafetlyComponent},
-      {path:'smart-image-classification', title:"Smart Image Classification | DATABOX", component:ImageClassificationComponent},
-      {path:'iot-product-development', title:"IoT Product Develpment | DATABOX", component:IotDevelopmentComponent},
+      {path:'home', component:HomeComponent},
+      {path:'services', component:ServicesComponent},
+      {path:'about', component:AboutComponent},
+      {path:'contact', component:ContactComponent},
+      {path:'smart-marketing', component:MarketingComponent},
+      {path:'smart-data-safetly', component:DataSafetlyComponent},
+      {path:'smart-image-classification', component:ImageClassificationComponent},
+      {path:'iot-product-development', component:IotDevelopmentComponent},
       // {path:'**', redirectTo:'inicio', pathMatch:'full'}
     ]
 }];

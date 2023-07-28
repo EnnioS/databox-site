@@ -1,4 +1,23 @@
-.data-safetly-box{
-    width: 450px;
-    box-shadow: 2px 2px 5px 2px rgba($color: #000000, $alpha: 0.3);
+
+
+@media (max-width:1200px){
+
+  .image-classification-box span{
+    font-size: 30px !important;
+    line-height: 1.6rem;
   }
+}
+
+@media (max-width:476px){
+  .h1-services{
+    width: min-content;
+  }
+}
+
+@media (max-width:400px){
+
+  .image-classification-box span{
+    font-size: 30px !important;
+    line-height: 1.8rem;
+  }
+}

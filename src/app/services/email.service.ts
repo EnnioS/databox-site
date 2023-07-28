@@ -8,7 +8,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class EmailService {
   
-  private url = 'https://enniosaenz.com/phpmailer/php-mailer-db.php';
+  private url = 'https://email.enniosaenz.com/phpmailer/php-mailer-db.php';
 
   constructor(private http: HttpClient) { 
     

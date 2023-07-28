@@ -1,16 +1,21 @@
-<section [ngClass]="'hero-banner-service-section'">
+<section [ngClass]="'hero-banner-service-section'" (window:resize)="onResize($event)">
     <div>
-      <img [src]="'assets/img/services/hero-banner-18.jpg'" [alt]="'hero banner service data safetly'" [title]="'Hero banner services'">
+      <img src="{{imgHead}}" [alt]="'hero banner service data safetly'" [title]="'Hero banner services'">
     </div>
     <div [ngClass]="['container','text-hero-banner-service']">
         
         <div [ngClass]="'text-hero-banner-service-container'">
-            <div [ngClass]="['text-box-hero-banner-service', 'image-classification-box', 'blue-back']">
-                <img [src]="'assets/img/icons/icon-19.svg'"><span [ngClass]="['white-color','f-size-38']">Smart Marketing</span>
+            <div [ngClass]="['text-box-hero-banner-service', 'image-classification-box']">
+                <div class="text-box-hero-banner-service-title blue-back">
+                    <img [src]="'assets/img/icons/icon-19.svg'">
+                    <span [ngClass]="['white-color','f-size-38']">
+                        {{"generic.sm" | translate}}
+                    </span>
+                </div>
             </div>
             <div [ngClass]="['text-description-hero-banner-service']">
                 <span [ngClass]="['white-color','f-size-25']">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    {{"generic.sm-descript" | translate}}
                 </span>
             </div>
         </div>
@@ -22,10 +27,121 @@
   </section>
 
   <section>
-    <div [ngClass]="'text-main-page-title'">
+    <div [ngClass]="['text-main-page-title','container']">
         <div>
-            <h1 [ngClass]="'f-size-30'">Smart Marketing</h1>
+            <h1 [ngClass]="['f-size-30','h1-services']">
+                {{"generic.sm" | translate}}    
+            </h1>
         </div>
-        <div [ngClass]="'punto-final-azul-titulo'"></div>
+        <div [ngClass]="'punto-final-azul-titulo-services'"></div>
     </div>
   </section>
+
+  <section>
+    <div [ngClass]="['what-is-container','container']">
+        <div [ngClass]="'what-is-title-container'">
+            
+            <span class="black-color f-size-25">
+                {{"services.sm.sub-title" | translate}}
+            </span>
+            
+        </div>
+
+        <div [ngClass]="'what-is-text-container'">
+            <span class="black-color">
+                {{"services.sm.what-is" | translate}}
+            </span>
+        </div>
+    </div>
+  </section>
+
+<section class="gray-container gray-back">
+    <div [ngClass]="['sub-title-line']">
+        <div>
+            <span [ngClass]="['sky-color', 'f-size-25']">
+                {{ "services.sm.topic1-title" | translate }}
+            </span>
+        </div>
+        <div ngClass="circle-lines">
+            <div [ngClass]="'sky-back'" [id]="'circle'">
+            </div>
+            <div [ngClass]="'sky-back'" [id]="'line'">
+            </div>
+        </div>
+    </div>    
+    <div class="container info-service-container">
+        <div class="info-service-img-container">
+            <img [src]="'assets/img/services/service-item-28.png'">
+        </div>
+        <div [innerHTML]="'services.sm.topic1-content' | translate">
+        </div>
+    </div>
+</section>
+
+<section class="white-container  white-back">
+    <div [ngClass]="['sub-title-line']">
+        <div>
+            <span [ngClass]="['black-color', 'f-size-25']">{{ "services.sm.topic2-title" | translate }}</span>
+        </div>
+        <div ngClass="circle-lines">
+            <div [ngClass]="'gray-back'" [id]="'circle'">
+            </div>
+            <div [ngClass]="'gray-back'" [id]="'line'">
+            </div>
+        </div>
+    </div>    
+
+    <div class="container info-service-container">
+        <div class="info-service-img-container">
+            <img [src]="'assets/img/services/service-item-29.png'">
+        </div>
+        <div [innerHTML]="'services.sm.topic2-content' | translate">
+        </div>
+    </div>
+</section>
+
+
+<section class="gray-container gray-back">
+    <div [ngClass]="['sub-title-line']">
+        <div>
+            <span [ngClass]="['sky-color', 'f-size-25']">{{ "services.sm.topic3-title" | translate }}</span>
+        </div>
+        <div ngClass="circle-lines">
+            <div [ngClass]="'sky-back'" [id]="'circle'">
+            </div>
+            <div [ngClass]="'sky-back'" [id]="'line'">
+            </div>
+        </div>
+    </div>    
+    <div class="container info-service-container">
+        <div class="info-service-img-container">
+            <img [src]="'assets/img/services/service-item-30.png'">
+        </div>
+        <div [innerHTML]="'services.sm.topic3-content' | translate">
+        </div>
+    </div>
+</section>
+
+<section class="white-container  white-back">
+    <div [ngClass]="['sub-title-line']">
+        <div>
+            <span [ngClass]="['black-color', 'f-size-25']">{{ "services.sm.topic4-title" | translate }}</span>
+        </div>
+        <div ngClass="circle-lines">
+            <div [ngClass]="'gray-back'" [id]="'circle'">
+            </div>
+            <div [ngClass]="'gray-back'" [id]="'line'">
+            </div>
+        </div>
+    </div>    
+
+    <div class="container info-service-container">
+        <div class="info-service-img-container">
+            <img [src]="'assets/img/services/service-item-31.png'">
+        </div>
+        <div [innerHTML]="'services.sm.topic4-content' | translate">
+            
+        </div>
+    </div>
+</section>
+

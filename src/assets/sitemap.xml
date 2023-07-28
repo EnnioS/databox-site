@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://www.datavoxai.com</loc>
+    <lastmod>2023-21-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.databoxai.com/home</loc>
+    <lastmod>2023-21-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+   <url>
+    <loc>https://www.databoxai.com/services</loc>
+    <lastmod>2023-21-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+   <url>
+    <loc>https://www.databoxai.com/smart-marketing</loc>
+    <lastmod>2023-21-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+   <url>
+    <loc>https://www.databoxai.com/smart-data-safetly</loc>
+    <lastmod>2023-21-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+  
+   <url>
+    <loc>https://www.databoxai.com/smart-image-classification</loc>
+    <lastmod>2023-21-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+   <url>
+    <loc>https://www.databoxai.com/iot-product-development</loc>
+    <lastmod>2023-21-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.databoxai.com/smart-image-classification</loc>
+    <lastmod>2023-21-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+  
+   <url>
+    <loc>https://www.databoxai.com/iot-product-development</loc>
+    <lastmod>2023-21-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.databoxai.com/about</loc>
+    <lastmod>2023-21-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+  
+   <url>
+    <loc>https://www.databoxai.com/contact</loc>
+    <lastmod>2023-21-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+ 
+</urlset>

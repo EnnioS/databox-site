@@ -1,12 +1,12 @@
-<section [ngClass]="'hero-pages'">
-    <img [src]="'/assets/img/about/hero-banner-16.jpg'">
+<section [ngClass]="'hero-pages'" (window:resize)="onResize($event)">
+    <img [src]="imgHead">
 </section>
 
 <section [ngClass]="'body-pages'">
     <div [ngClass]="['container', 'intro-aboutus']">
         <div [ngClass]="'text-main-page-title'">
             <div>
-                <h1 [ngClass]="'f-size-30'">About us</h1>
+                <h1 [ngClass]="'f-size-30'">{{"menu.about" | translate }}</h1>
             </div>
             <div [ngClass]="'punto-final-azul-titulo'"></div>
         </div>
@@ -16,21 +16,23 @@
         <div>
             <p>
                 <span [ngClass]="['f-size-25','blue-color']">
-                    “We are a team that specialises in analysing data to extract features
-                    of interest”
+                    {{"about.title" | translate}}
                 </span>
             </p>
         </div>
         <div>
             <span>
+                {{"about.sub-title" | translate}}
+            </span>
+            <!-- <span>
                 We make use of our own algorithm or any other algorithm developed by third party companies in order to scrub the data, train the model or models and execute the trained model to extract the desired information.
                 
                 Our team is based on two countries depending on the magnitude and complexity of the project, Nicaragua and Taiwan.
-            </span>
+            </span> -->
         </div>
     </div>
 
-    <div [ngClass]="['sky-back','blue-Container']"> 
+    <!-- <div [ngClass]="['sky-back','blue-Container']"> 
         <div [ngClass]="['container','about-text-intro2','text-center']">
             <div>
                 <p [ngClass]="'f-size-38'">
@@ -59,12 +61,12 @@
             </a>
             </button>
         </div>
-    </div>
+    </div> -->
 
-    <div>
+    <div style="margin-top: 50px;">
         <div [ngClass]="['sub-title-line']">
             <div>
-                <span [ngClass]="['dark-gray-color', 'f-size-25']">Success Case</span>
+                <span [ngClass]="['dark-gray-color', 'f-size-25']">{{"about.succes-c-title" | translate}}</span>
             </div>
             <div ngClass="circle-lines">
                 <div [ngClass]="'dark-gray-back'" [id]="'circle'">
@@ -76,29 +78,78 @@
         <div [ngClass]="['container','success-case-boxes']">
             <div>
                 <span>
-                    An agency has trouble finding what was the level of investment of a group of companies. 
-                    Example, if a company started with an Angel investor how much investment was initially 
-                    provided with, if later this company was able to acquired level A of investment, the 
-                    agency wanted to know who provided that investment and for how much. This information was 
-                    very important because the agency facilitates company the acquisitions of loans. So our 
-                    work was to create a script that search the internet and an article subscription service 
-                    to constantly update the investment information of every company on our database.
-                </span>
-            </div>
-            <hr>
-            <div>
-                <span>
-                    An agency has trouble finding what was the level of investment of a group of companies. 
-                    Example, if a company started with an Angel investor how much investment was initially 
-                    provided with, if later this company was able to acquired level A of investment, the 
-                    agency wanted to know who provided that investment and for how much. This information was 
-                    very important because the agency facilitates company the acquisitions of loans. So our 
-                    work was to create a script that search the internet and an article subscription service 
-                    to constantly update the investment information of every company on our database.
+                    {{"about.succes-c.case1" | translate}}
                 </span>
             </div>
             <hr>
         </div>
         
+    </div>
+</section>
+
+<section class="white-container  white-back">
+    <div [ngClass]="['sub-title-line']">
+        <div>
+            <span [ngClass]="['black-color', 'f-size-25']">{{"about.succes-s-title" | translate}}</span>
+        </div>
+        <div ngClass="circle-lines">
+            <div [ngClass]="'dark-gray-back'" [id]="'circle'">
+            </div>
+            <div [ngClass]="'dark-gray-back'" [id]="'line'">
+            </div>
+        </div>
+    </div>    
+
+    <div class="container info-service-container">
+        <!-- <div class="info-service-img-container">
+            <img [src]="'assets/img/services/service-item-29.png'">
+        </div> -->
+        <div>
+            <p>
+                <span>
+                    <p>
+                        <strong>{{"about.succes-s-iot.title-s1" | translate}}</strong>
+                    </p>
+                    {{"about.succes-s-iot.s1" | translate}}
+                </span>
+            </p>
+
+            <hr>
+
+            <p>
+                <span>
+                    <p>
+                        <strong>{{"about.succes-s-iot.title-s2" | translate}}</strong>
+                    </p>
+                    {{"about.succes-s-iot.s2" | translate}}
+                </span>
+            </p>
+
+            <hr>
+
+            <p>
+                <span>
+                    <p>
+                        <strong>{{"about.succes-s-iot.title-s3" | translate}}</strong>
+                    </p>
+                    {{"about.succes-s-iot.s3" | translate}}
+                </span>
+            </p>
+
+            <hr>
+
+            <p>
+                <span>
+                    <p>
+                        <strong>{{"about.succes-s-iot.title-s4" | translate}}</strong>
+                    </p>
+                    <span [innerHTML] = "'about.succes-s-iot.s4' | translate"></span>
+                </span>
+            </p>
+
+            <hr>
+
+
+        </div>
     </div>
 </section>

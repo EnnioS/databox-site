@@ -1,17 +1,20 @@
+
 <footer [ngClass]="'footer'">
     <div [ngClass]="['container', 'footer-container']">
         <div [ngClass]="'copyright-container'">
             <div> 
-                <img [src]="'assets/img/logo/logo-07.png'">
+                <a href="/">
+                    <img [src]="'assets/img/logo/logo-07.png'">
+                </a>
             </div>
             <div>
-            <span>Copyright© {{anio.getFullYear()}}, All rights reserved.</span>
+            <span>Copyright© {{anio.getFullYear()}}, {{"footer.allRight" | translate }}</span>
             </div>
         </div>
         <div [ngClass]="'social-web'">
             <a [href]="'/contact'">
                 <button [ngClass]="'btn-white-blue'">
-                    <span>Contact us</span>
+                    <span>{{"generic.contact" | translate}}</span>
                     <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.33 22.32">
                         <path d="M9,20,16,13H0V9.47H15.94L8.83,2.38,11.19,0,22.33,11.13,11.15,22.32Z"/>
                     </svg> 
@@ -21,9 +24,9 @@
                 <a href="#">
                     <img [src]="'assets/img/icons/icon-08.svg'">
                 </a>
-                <a href="#">
+                <!-- <a href="#">
                     <img [src]="'assets/img/icons/icon-09.svg'">
-                </a>
+                </a> -->
                 <!-- <a href="#">
                     <img [src]="'assets/img/icons/icon-10.svg'">
                 </a> -->

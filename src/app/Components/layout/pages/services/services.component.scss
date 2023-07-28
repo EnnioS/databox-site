@@ -1,0 +1,39 @@
+//SECCION HOME HERO BANNER
+.service-pages-box {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 50px auto;
+    gap: 40px;
+    justify-content: space-evenly;
+}
+
+.service-page-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 270px;
+    min-height: 340px;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.service-pages-box button{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 105px;
+}
+.service-pages-box img{
+    width: 100%;
+}
+
+.icon-services-container{
+    width: 55px;
+    align-self: center;
+}
+
+.title-services-container{
+    text-align: center;
+}
+.text-description-hero-banner-home{
+    max-width: 45%;
+}
