@@ -61,7 +61,7 @@ export class ContactComponent implements OnInit{
       how:['', Validators.required],
       subject: ['', Validators.required],
       message: ['', Validators.required],
-      to: ['enniosaenz@gruposimsacn.com']
+      to: ['ronald.garcia@databoxai.com']
     });
     
   
