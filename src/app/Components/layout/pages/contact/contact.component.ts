@@ -39,7 +39,7 @@ export class ContactComponent implements OnInit{
 
   //alert optional
   options = {
-    autoClose: true,
+    autoClose: false,
     keepAfterRouteChange: false
   };
 
@@ -109,22 +109,13 @@ export class ContactComponent implements OnInit{
       this.contact.SendEmail(formData).subscribe({
         next: (response) =>{
           if(response){
-            console.log("sevice: Email enviado, , respuesta: " + response);
+            console.log("sevice: Email enviado, respuesta: " + response);
             this.alertMessages(response)
             
-            // this.FormData = this.builder.group({
-             
-            //   first:['', Validators.required],
-            //   // last:['', Validators.required],
-            //   // company:['', Validators.required],
-            //   // country:['', Validators.required],
-            //   email: ['', [Validators.compose([Validators.required, Validators.email])]],
-            //   // phone:['', Validators.required],
-            //   // how:['', Validators.required],
-            //   subject: ['', Validators.required],
-            //   message: ['', Validators.required],
-              
-            // });
+            
+          }else{
+            console.log("sevice: No hay respuesta, respuesta: " + response);
+            this.alertMessages(response)
           }
         },
         error: (response) => {
