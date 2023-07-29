@@ -70,6 +70,9 @@ export class ContactComponent {
         if(response){
           console.log("sevice: No hay respuesta, error: " + response);
           this.alertMessages(response)
+        }else{
+          console.log("sevice: No hay respuesta, error: " + response);
+          this.alertMessages(response)
         }
       }
     });
