@@ -15,7 +15,7 @@ export class AppComponent implements OnInit{
     this.title.setTitle('DATABOXAI');
     this.metaTagService.addTags([
       {name:'keywords', content:'databox, marketing, ai, IoT, Product development, Image Classification, Data Safetly'},
-      {name:'robot', content: 'noindex, follow'},
+      {name:'robot', content: 'index, follow'},
       {name:'author', content: 'Ennio Sáenz'},
       {name:'viewport', content: 'width=device-width, initial-scale=1'},
     ]);

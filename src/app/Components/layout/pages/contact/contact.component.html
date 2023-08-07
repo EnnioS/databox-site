@@ -24,8 +24,8 @@
                 <div class="form-group">
                     <label><span>{{"contact.form.first" | translate}}</span></label>
                     <input class="form-control" type="text" name="name" formControlName="first">
-                    <span [ngClass]="'error-validation'" *ngIf="validationError && FormData.get('first')?.hasError">
-                        * First Name is required
+                    <span [ngClass]="'error-validation'" *ngIf="first?.invalid && ( first?.dirty || first?.touched ) && first?.hasError">
+                        {{ "contact.form.first-required" | translate}}
                      </span>
                 </div>
                 <div class="form-group">
@@ -49,8 +49,8 @@
                 <div class="form-group">
                     <label><span>{{"contact.form.email" | translate}}</span></label>
                     <input class="form-control" type="email" name="email" formControlName="email">
-                    <span [ngClass]="'error-validation'" *ngIf="validationError && FormData.get('first')?.hasError">
-                        * Email is required, ex.: name@doman.com
+                    <span [ngClass]="'error-validation'" *ngIf="email?.invalid && ( email?.dirty || email?.touched ) && email?.hasError">
+                        {{ "contact.form.email-required" | translate }}
                      </span>
                 </div>
                 <div class="form-group">
@@ -67,21 +67,27 @@
             <div class="form-group">
                 <label><span>{{"contact.form.subject" | translate}}</span></label>
                 <input class="form-control" type="text" name="subject" formControlName="subject">
+                <span [ngClass]="'error-validation'" *ngIf="subject?.invalid && ( subject?.dirty || subject?.touched ) && subject?.hasError">
+                    {{ "contact.form.subject-required" | translate }}
+                 </span>
             </div>
 
             <div class="form-group">
                 <label><span>{{"contact.form.how-can-we-help" | translate}}</span></label>
                 <textarea class="form-control" rows="10" cols="50" name="message" formControlName="message">
                 </textarea>
+                <span [ngClass]="'error-validation'" *ngIf="message?.invalid && ( message?.dirty || message?.touched ) && message?.hasError">
+                    {{ "contact.form.message-required" | translate }}
+                 </span>
+               
             </div>
 
             <div [ngClass]="['btn-content']">
-                <button [ngClass]="['btn-black-blue']" type="submit"><span>{{"contact.form.submit" | translate}}</span></button>
+                <button [ngClass]="['btn-black-blue']" type="submit" [disabled]="!FormData.valid">
+                    <span>{{"contact.form.submit" | translate}}</span>
+                </button>
             </div>
-            <!-- [disabled]="!FormData.valid" -->
 
-
-            
             <!-- <div *ngIf="tokenVisible"> reCAPTCHA Token <br />
                 <p style="color: red">{{reCAPTCHAToken}}</p>
             </div> -->

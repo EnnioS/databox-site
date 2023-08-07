@@ -186,7 +186,7 @@ body{
     border: unset;
 }
 
-.btn-black-blue:hover{
+.btn-black-blue:hover:not([disabled]){
     background-color: #00499a;
 }
 

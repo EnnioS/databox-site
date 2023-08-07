@@ -48,22 +48,26 @@
         "metaDescription":"pending",
         "title":"Consultas generales",
         "contact":{
-            "email":"customer.service@databoxai.com",
-            "phone1":" | +(886) 985-807-279",
+            "email":"ronald.garcia@databoxai.com ",
+            "phone1":"| +(886) 985-807-279",
             "phone2":"| +(505) 8696 9703"
         },
         "get-in-touch":"Ponte en contacto<br> con nosotros",
-        "get-in-touch-text":"Nuestra sede está en América Central y trabajamos con clientes y socios en todo el mundo. Sumérgete en el corazón de nuestra vibrante cultura y sumérgete en la experiencia única de nuestra oficina. Siente la energía y abraza la pasión que alimenta a nuestro equipo. Únase a nosotros para una visita y descubra de primera mano cómo nuestra cultura nos diferencia.",
+        "get-in-touch-text":"Nuestra sede se encuentra ubicada en América Central, trabajamos con clientes y socios en todo el mundo. Sumérgete en el corazón de nuestra cultura vibrante y sumérgete en la experiencia única de nuestra oficina. Siente la energía y abraza la pasión que alimenta a nuestro equipo. Contactanos para una visita y descubra de primera mano cómo nuestra cultura nos diferencia.",
         "form":{
             "first":"Nombre",
+            "first-required" : "* Primer nombre es requerido",
             "last":"Apellido",
             "company":"Empresa",
             "country":"País",
             "email":"Email",
-            "Phone-number":"Número telefónco",
+            "email-required" : "* EL email es requerido, ejemplo.: nombre@dominio.com",
+            "Phone-number":"Número telefónico",
             "how-did-you":"¿Cómo te enterastes de nosotros?",
             "subject":"Asunto",
-            "how-can-we-help":"¿óomo podemos ayudarte?",
+            "subject-required" : "* El Asunto es requerido",
+            "how-can-we-help":"¿Cómo podemos ayudarte?",
+            "message-required" : "* El mensaje es requerido",
             "submit":"Enviar"
         }
     },

@@ -8,6 +8,7 @@ import { CanonicalSeoService } from 'src/app/services/canonical-seo.service';
 
 //RECAPTCHA V3
 import { ReCaptchaV3Service } from 'ng-recaptcha';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
@@ -43,9 +44,22 @@ export class ContactComponent implements OnInit{
     keepAfterRouteChange: false
   };
 
+  //Email Pattern
+  private emailPattern: any = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+  //Traducir ngx desde variables
 
-  constructor(private builder:FormBuilder, private contact: EmailService, 
+  currentLang!:string;
+  successEmail!:string;
+  notSuccessEmail!:string;
+  errorSendEmail!:string;
+
+  
+
+  constructor(
+    private translate: TranslateService,
+    private builder:FormBuilder,
+    private contact: EmailService, 
     public alert:AlertService, 
     private title:Title,
     private MetaTagService:Meta, 
@@ -53,18 +67,16 @@ export class ContactComponent implements OnInit{
     private recaptchaV3Service: ReCaptchaV3Service) { 
     this.FormData = this.builder.group({
       first:['', Validators.required],
-      last:['', Validators.required],
-      company:['', Validators.required],
-      country:['', Validators.required],
-      email: ['', [Validators.compose([Validators.required, Validators.email,Validators.pattern("[^ @]*@[^ @]*")])]],
-      phone:['', Validators.required],
-      how:['', Validators.required],
+      last:[''],
+      company:[''],
+      country:[''],
+      email: ['', [Validators.compose([Validators.required, Validators.email,Validators.pattern(this.emailPattern)])]],
+      phone:[''],
+      how:[''],
       subject: ['', Validators.required],
       message: ['', Validators.required],
       to: ['ronald.garcia@databoxai.com']
     });
-    
-  
   }
 
   ngOnInit(): void {
@@ -90,14 +102,20 @@ export class ContactComponent implements OnInit{
    this.MetaTagService.updateTag(
     {name:'description', content: 'We are based in Central America and work with clients and partners worldwide. Dive deep into the heart of our vibrant culture and immerse yourself wh us.'}
   );
+
+
+  //Translate
+  this.currentLang = this.translate.currentLang;
+
  }
 
 
  //FORM AND NOTIFICATION
   onSubmit(formData:FormGroup){
-    this.sendEmail(formData);
+    
     this.recaptchaV3Service.execute('importantAction').subscribe((token: string) => {
       this.tokenVisible = true;
+      this.sendEmail(formData);
       this.reCAPTCHAToken = `Token [${token}] generated`;
   });
 
@@ -111,7 +129,7 @@ export class ContactComponent implements OnInit{
           if(response){
             console.log("sevice: Email enviado, respuesta: " + response);
             this.alertMessages(response)
-            
+            this.FormData.reset();
             
           }else{
             console.log("sevice: No hay respuesta, respuesta: " + response);
@@ -130,17 +148,29 @@ export class ContactComponent implements OnInit{
     }
   }
 
+ 
   alertMessages(response:any):void{
     if(response){
-      this.alert.success('El correo fue enviado exitosamente', this.options);
+      this.translateEmailMessage();
+      this.alert.success(this.successEmail, this.options);
     } else if(!response){
-      this.alert.error('El correo no pudo ser enviado', this.options);
+      this.alert.error(this.notSuccessEmail, this.options);
     } else{
-      this.alert.info('El correo no pudo ser enviado, no hay conexión hacia el servidor', this.options);
+      this.alert.info(this.errorSendEmail, this.options);
     }
   }
 
-
+translateEmailMessage(){
+  if(this.currentLang == 'es'){
+    this.successEmail = "El correo fue enviado exitosamente";
+    this.notSuccessEmail = "El correo no pudo ser enviado";
+    this.errorSendEmail = "El correo no pudo ser enviado debido a un problema de conexion con el servidor";
+  }else{
+    this.successEmail = "The email was sent successfully";
+    this.notSuccessEmail = "The email could not be sent";
+    this.errorSendEmail = "EThe mail could not be sent due to a connection problem with the server";
+  }
+}
   //CHANGE IMAGE
 
   
@@ -162,6 +192,13 @@ export class ContactComponent implements OnInit{
       this.imgHead = "assets/img/contact/hero-banner-17.jpg";
     }
   }
+
+
+//getters se están usando para validación de campos
+  get first(){return this.FormData.get('first')}
+  get email(){return this.FormData.get('email')}
+  get subject(){return this.FormData.get('subject')}
+  get message(){return this.FormData.get('message')}
 
 
 }

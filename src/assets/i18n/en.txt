@@ -21,7 +21,7 @@
     },
     "home":{
         "metaDescription":"DataBoxAI es a  way businesses thrive in the digital era.",
-        "weare":"“We’re a software and services company that builds and transforms businesses using advatnce technologies, data and AI”",
+        "weare":"“We’re a software and services company that builds and transforms businesses using advance technologies, data and AI”",
         "welcome":"Welcome to DataBoxAI, a cutting-edge software company dedicated to revolutionizing the way businesses thrive in the digital era. With our innovative solutions and expertise in artificial intelligence, data mining and security, we empower organizations to streamline their operations, enhance productivity, and unlock their full potential. Whether you're a startup looking to enhance your presence or an established enterprise seeking to optimize your processes, our team of skilled professionals is here to craft tailored software solutions that meet your unique needs. Explore our comprehensive range of services, leverage the power of technology, and embark on a transformative journey towards success with us."
     },
      "about":{
@@ -48,7 +48,7 @@
         "metaDescription":"pending",
         "title":"General Inquiries",
         "contact":{
-            "email":"customer.service@databoxai.com",
+            "email":"ronald.garcia@databoxai.com ",
             "phone1":"| +(886) 985-807-279",
             "phone2":"| +(505) 8696 9703"
         },
@@ -56,14 +56,18 @@
         "get-in-touch-text":"We are based in Central America and work with clients and partners worldwide. Dive deep into the heart of our vibrant culture and immerse yourself in the unique experience of our office. Feel the energy and embrace the passion that fuels our team. Join us for a visit and discover firsthand how our culture sets us apart.",
         "form":{
             "first":"First",
+            "first-required" : "* First Name is required",
             "last":"Last",
             "company":"Company",
             "country":"Country",
             "email":"Email",
+            "email-required" : "* Email is required, ex.: name@domain.com",
             "Phone-number":"Phone number",
             "how-did-you":"How did you hear about us?",
             "subject":"Subject",
+            "subject-required" : "* Subject is required",
             "how-can-we-help":"How can we help?",
+            "message-required" : "* Message is required",
             "submit":"Submit"
         }
     },
