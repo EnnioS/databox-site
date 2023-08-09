@@ -22,9 +22,10 @@ export class ContactComponent implements OnInit{
   isMobileScreen!:boolean;
   imgHead!:string;
 
-  //RECAPTCHA GOOGLE - Ennio Account
-  captchaSiteKey: string = "6LeAEx0nAAAAABgZ9MHmbGLEIlYBGWOkX-VmW5hs";
-  captchaServerKey: string = "6LeAEx0nAAAAAJ1H1jobFKxJ_5dWIcgvXt8N3Ltz";
+  /*RECAPTCHA GOOGLE - Ronald Garcia Account this key is running in the layout module
+   webkey: "AIzaSyCiVzBd9z4nVmXr_R_AFoUIjAPkKsuA3cg"*/
+
+  
  
   submitted = false;
   reCAPTCHAToken: string = "";
